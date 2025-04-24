@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_layout_flutter/themes/my_theme.dart';
 import 'package:projeto_layout_flutter/themes/themes_colors.dart';
 
 class HeaderComponent extends StatelessWidget {
@@ -31,21 +32,16 @@ class HeaderComponent extends StatelessWidget {
                 Text.rich(
                   TextSpan(
                     text: "\$",
-                    style: TextStyle(fontSize: 16, color: Colors.white),
                     children: <TextSpan>[
                       TextSpan(
                         text: "1000.00",
-                        style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: Theme.of(context).textTheme.bodyLarge
                       ),
                     ],
                   ),
                 ),
                 Text(
                   "Saldo disponível",
-                  style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
               ],
             ),

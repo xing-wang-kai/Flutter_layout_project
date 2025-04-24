@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_layout_flutter/themes/themes_colors.dart';
 
 class BoxCardComponent extends StatelessWidget {
 
@@ -7,12 +8,12 @@ class BoxCardComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Ink(
       padding: EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         boxShadow: kElevationToShadow[3],
         borderRadius: BorderRadius.circular(10),
-        color: Theme.of(context).cardColor,
+        color: ThemeColors.cardColor,
       ),
       child: boxContent,
     );
